@@ -1,0 +1,455 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>LIANA - Elegance in Every Thread</title>
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,600;0,700;1,400&family=Poppins:wght@300;400;500;600&display=swap"
+        rel="stylesheet">
+    <!-- FontAwesome for Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <!-- Stylesheet -->
+    <link rel="stylesheet" href="style.css">
+    <!-- SEO Meta Tags -->
+    <meta name="description"
+        content="Discover premium, elegant, and minimal fashion with LIANA. Shop the latest dresses, tops, bottoms, and accessories for the modern woman.">
+</head>
+
+<body>
+
+    <!-- Sticky Navigation -->
+    <header class="navbar" id="navbar">
+        <div class="nav-container">
+            <h1 class="logo"><a href="#" data-link="home">LIANA</a></h1>
+            <nav class="nav-links">
+                <a href="#" data-link="home">Home</a>
+                <a href="#" data-link="shop">Shop</a>
+                <a href="#" data-link="about">About</a>
+                <a href="#" data-link="contact">Contact</a>
+            </nav>
+            <div class="nav-icons">
+                <a href="#" data-link="search" aria-label="Search" class="search-toggle"><i
+                        class="fas fa-search"></i></a>
+                <a href="#" data-link="auth" aria-label="User Login"><i class="far fa-user"></i></a>
+                <a href="#" data-link="wishlist" aria-label="Wishlist"><i class="far fa-heart"></i><span
+                        id="wishlist-count" class="badge">0</span></a>
+                <a href="#" data-link="cart" aria-label="Cart"><i class="fas fa-shopping-bag"></i><span id="cart-count"
+                        class="badge">0</span></a>
+                <!-- Mobile Menu Toggle -->
+                <button class="menu-toggle" id="mobile-menu-btn"><i class="fas fa-bars"></i></button>
+            </div>
+        </div>
+        <!-- Search Overlay (Hidden by default) -->
+        <div class="search-overlay" id="search-overlay">
+            <input type="text" id="search-input" placeholder="Search for elegence...">
+            <button id="close-search"><i class="fas fa-times"></i></button>
+        </div>
+    </header>
+
+    <!-- Main Content Area where views will be swapped -->
+    <main id="app">
+
+        <!-- ================= HOME PAGE ================= -->
+        <section id="page-home" class="page active-page">
+            <!-- Hero Section -->
+            <section class="hero-section">
+                <div class="hero-content">
+                    <h2 class="hero-title">Elegance in Every Thread</h2>
+                    <p class="hero-subtitle">Discover a curated collection of minimal, feminine, and premium styles for
+                        the modern aesthetic.</p>
+                    <button class="btn btn-primary" data-link="shop">Shop the Collection</button>
+                </div>
+            </section>
+
+            <!-- Featured Collections -->
+            <section class="featured-section section-padding">
+                <div class="container">
+                    <h3 class="section-title">Curated For You</h3>
+                    <div class="featured-categories">
+                        <div class="category-card" data-category="Dresses"
+                            onclick="window.navigateTo('shop', {category: 'Dresses'})">
+                            <img src="https://images.unsplash.com/photo-1595777457583-95e059d581b8?auto=format&fit=crop&w=600&q=80"
+                                alt="Dresses">
+                            <h4 class="category-title">Dresses</h4>
+                        </div>
+                        <div class="category-card" data-category="Tops"
+                            onclick="window.navigateTo('shop', {category: 'Tops'})">
+                            <img src="https://images.unsplash.com/photo-1551048632-24e444b48a3e?auto=format&fit=crop&w=600&q=80"
+                                alt="Tops">
+                            <h4 class="category-title">Tops</h4>
+                        </div>
+                        <div class="category-card" data-category="Bottoms"
+                            onclick="window.navigateTo('shop', {category: 'Bottoms'})">
+                            <img src="https://images.unsplash.com/photo-1541099649105-f69ad21f3246?auto=format&fit=crop&w=600&q=80"
+                                alt="Bottoms">
+                            <h4 class="category-title">Bottoms</h4>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Promotional Banner -->
+            <section class="promo-section">
+                <div class="promo-content container">
+                    <h2>End of Season Sale</h2>
+                    <p>Up to 40% off on all trending styles. Limited time only.</p>
+                    <button class="btn btn-outline" data-link="shop">Explore Offers</button>
+                </div>
+            </section>
+
+            <!-- Trending Carousel/Grid -->
+            <section class="trending-section section-padding">
+                <div class="container">
+                    <h3 class="section-title">Trending Now</h3>
+                    <div class="product-grid" id="home-trending-grid">
+                        <!-- Populated by JS -->
+                    </div>
+                </div>
+            </section>
+
+            <!-- Testimonials -->
+            <section class="testimonials-section section-padding bg-soft">
+                <div class="container">
+                    <h3 class="section-title">What They Say</h3>
+                    <div class="testimonials-grid">
+                        <div class="testimonial-card">
+                            <p class="quote">"LIANA's dresses are simply perfect. The material feels so premium and the
+                                fit is incredibly flattering. I feel beautiful every time I wear them."</p>
+                            <h5 class="author">— Sophia M.</h5>
+                        </div>
+                        <div class="testimonial-card">
+                            <p class="quote">"Finally, a brand that understands modern elegance. I love the soft color
+                                palettes and how timeless the pieces look."</p>
+                            <h5 class="author">— Chloe R.</h5>
+                        </div>
+                        <div class="testimonial-card">
+                            <p class="quote">"The best shopping experience. Fast delivery and the clothes are even
+                                better in person. My new favorite shop!"</p>
+                            <h5 class="author">— Emma T.</h5>
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </section>
+
+        <!-- ================= SHOP PAGE ================= -->
+        <section id="page-shop" class="page">
+            <div class="shop-header">
+                <h2>Our Collection</h2>
+            </div>
+            <div class="shop-container container section-padding">
+                <!-- Filters Sidebar -->
+                <aside class="shop-sidebar">
+                    <div class="filter-group">
+                        <h4 class="filter-title">Category</h4>
+                        <ul class="filter-list" id="filter-category">
+                            <li><label><input type="radio" name="category" value="All" checked> All</label></li>
+                            <li><label><input type="radio" name="category" value="Dresses"> Dresses</label></li>
+                            <li><label><input type="radio" name="category" value="Tops"> Tops</label></li>
+                            <li><label><input type="radio" name="category" value="Bottoms"> Bottoms</label></li>
+                            <li><label><input type="radio" name="category" value="Accessories"> Accessories</label></li>
+                        </ul>
+                    </div>
+
+                    <div class="filter-group">
+                        <h4 class="filter-title">Price Range</h4>
+                        <ul class="filter-list" id="filter-price">
+                            <li><label><input type="radio" name="price" value="All" checked> All</label></li>
+                            <li><label><input type="radio" name="price" value="under5000"> Under ₹5000</label></li>
+                            <li><label><input type="radio" name="price" value="5000to10000"> ₹5000 - ₹10000</label></li>
+                            <li><label><input type="radio" name="price" value="over10000"> Over ₹10000</label></li>
+                        </ul>
+                    </div>
+                </aside>
+
+                <!-- Products Display -->
+                <div class="shop-main">
+                    <div class="shop-toolbar">
+                        <span id="product-count">Showing results</span>
+                        <select id="sort-select" class="sort-select">
+                            <option value="featured">Featured</option>
+                            <option value="price-low">Price: Low to High</option>
+                            <option value="price-high">Price: High to Low</option>
+                            <option value="newest">Newest Arrivals</option>
+                        </select>
+                    </div>
+                    <div class="product-grid" id="main-shop-grid">
+                        <!-- Populated by JS -->
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- ================= PRODUCT DETAIL PAGE ================= -->
+        <section id="page-product" class="page section-padding">
+            <div class="container text-center" id="product-loading">Loading product...</div>
+            <div class="container product-detail-container" id="product-detail-content" style="display: none;">
+                <!-- Populated by JS -->
+            </div>
+        </section>
+
+        <!-- ================= CART PAGE ================= -->
+        <section id="page-cart" class="page section-padding">
+            <div class="container">
+                <h2 class="page-title">Your Cart</h2>
+                <div class="cart-layout">
+                    <div class="cart-items" id="cart-items-container">
+                        <!-- Populated by JS -->
+                        <div class="empty-cart-message">Your cart is empty.</div>
+                    </div>
+                    <div class="cart-summary">
+                        <h3>Order Summary</h3>
+                        <div class="summary-row">
+                            <span>Subtotal</span>
+                            <span id="cart-subtotal">₹0.00</span>
+                        </div>
+                        <div class="summary-row">
+                            <span>Shipping</span>
+                            <span>Free</span>
+                        </div>
+                        <hr>
+                        <div class="summary-row total">
+                            <span>Total</span>
+                            <span id="cart-total">₹0.00</span>
+                        </div>
+                        <button class="btn btn-primary w-100" style="margin-top: 1.5rem;" data-link="checkout">Proceed
+                            to Checkout</button>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- ================= CHECKOUT PAGE ================= -->
+        <section id="page-checkout" class="page section-padding">
+            <div class="container">
+                <h2 class="page-title">Checkout</h2>
+                <div class="checkout-layout">
+                    <form class="checkout-form" id="checkout-form">
+                        <h3>Shipping Information</h3>
+                        <div class="form-group">
+                            <label for="fname">Full Name</label>
+                            <input type="text" id="fname" required placeholder="Jane Doe">
+                        </div>
+                        <div class="form-group">
+                            <label for="address">Address</label>
+                            <input type="text" id="address" required placeholder="123 Elegant St, Fashion City">
+                        </div>
+                        <div class="form-row">
+                            <div class="form-group">
+                                <label for="phone">Phone</label>
+                                <input type="tel" id="phone" required placeholder="123-456-7890">
+                            </div>
+                            <div class="form-group">
+                                <label for="email">Email</label>
+                                <input type="email" id="email" required placeholder="jane@example.com">
+                            </div>
+                        </div>
+
+                        <h3 class="mt-4">Payment Method</h3>
+                        <div class="payment-methods">
+                            <label class="payment-method">
+                                <input type="radio" name="payment" value="card" checked>
+                                <span>Credit Card <img src="https://img.icons8.com/color/48/000000/visa.png" alt="Visa"
+                                        style="height:20px;vertical-align:middle;margin-left:5px;"></span>
+                            </label>
+                            <label class="payment-method">
+                                <input type="radio" name="payment" value="paypal">
+                                <span>PayPal <img src="https://img.icons8.com/color/48/000000/paypal.png" alt="PayPal"
+                                        style="height:20px;vertical-align:middle;margin-left:5px;"></span>
+                            </label>
+                        </div>
+
+                        <div id="card-details">
+                            <div class="form-group mt-2">
+                                <label>Card Number</label>
+                                <input type="text" placeholder="0000 0000 0000 0000">
+                            </div>
+                            <div class="form-row">
+                                <div class="form-group">
+                                    <label>Expiry Date</label>
+                                    <input type="text" placeholder="MM/YY">
+                                </div>
+                                <div class="form-group">
+                                    <label>CVV</label>
+                                    <input type="text" placeholder="123">
+                                </div>
+                            </div>
+                        </div>
+
+                        <button type="submit" class="btn btn-primary w-100 mt-4">Place Order</button>
+                    </form>
+
+                    <div class="checkout-summary">
+                        <h3>Order Summary</h3>
+                        <div id="checkout-items">
+                            <!-- Populated by JS -->
+                        </div>
+                        <hr>
+                        <div class="summary-row total">
+                            <span>Total</span>
+                            <span id="checkout-total">₹0.00</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- ================= WISHLIST PAGE ================= -->
+        <section id="page-wishlist" class="page section-padding">
+            <div class="container">
+                <h2 class="page-title">Your Wishlist</h2>
+                <div class="product-grid" id="wishlist-grid">
+                    <!-- Populated by JS -->
+                </div>
+                <div id="empty-wishlist-message" class="text-center" style="display: none; padding: 3rem 0;">
+                    <p>Your wishlist is currently empty.</p>
+                    <button class="btn btn-outline mt-2" data-link="shop">Explore Collection</button>
+                </div>
+            </div>
+        </section>
+
+        <!-- ================= ABOUT PAGE ================= -->
+        <section id="page-about" class="page">
+            <div class="about-hero">
+                <h2>Our Story</h2>
+            </div>
+            <div class="container section-padding">
+                <div class="about-content">
+                    <div class="about-image">
+                        <img src="https://images.unsplash.com/photo-1490481651871-ab68de25d43d?auto=format&fit=crop&w=800&q=80"
+                            alt="Brand Story">
+                    </div>
+                    <div class="about-text">
+                        <h3>Elegance & Confidence</h3>
+                        <p>Welcome to LIANA, a contemporary fashion house founded on the belief that clothing should
+                            empower the women who wear it. We blend minimalist elegance with premium quality to create
+                            pieces that fit seamlessly into modern life.</p>
+                        <p>Our focus is on timeless aesthetics. Whether you're dressing for a professional setting or a
+                            casual evening, our carefully curated designs ensure you always step out in confidence.</p>
+                        <p><em>"True elegance is about feeling like yourself, only better."</em></p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- ================= CONTACT PAGE ================= -->
+        <section id="page-contact" class="page section-padding">
+            <div class="container">
+                <h2 class="page-title">Get in Touch</h2>
+                <div class="contact-layout">
+                    <div class="contact-info">
+                        <h3>We'd love to hear from you</h3>
+                        <p>Have questions about our sizing, an order, or just want to say hello? Reach out to us.</p>
+                        <ul class="contact-methods">
+                            <li><i class="fas fa-map-marker-alt"></i> 123 Fashion Ave, NY 10001</li>
+                            <li><i class="fas fa-phone"></i> +1 (555) 123-4567</li>
+                            <li><i class="fas fa-envelope"></i> hello@lianafashion.com</li>
+                        </ul>
+                        <div class="contact-social">
+                            <a href="https://instagram.com/" target="_blank"><i class="fab fa-instagram"></i></a>
+                            <a href="https://pinterest.com/" target="_blank"><i class="fab fa-pinterest"></i></a>
+                            <a href="#"><i class="fab fa-twitter"></i></a>
+                        </div>
+                    </div>
+                    <form class="contact-form" id="contact-form">
+                        <div class="form-group">
+                            <label>Name</label>
+                            <input type="text" required>
+                        </div>
+                        <div class="form-group">
+                            <label>Email</label>
+                            <input type="email" required>
+                        </div>
+                        <div class="form-group">
+                            <label>Message</label>
+                            <textarea rows="5" required></textarea>
+                        </div>
+                        <button type="submit" class="btn btn-primary">Send Message</button>
+                    </form>
+                </div>
+            </div>
+        </section>
+
+        <!-- ================= AUTH (LOGIN/SIGNUP) PAGE ================= -->
+        <section id="page-auth" class="page section-padding">
+            <div class="container auth-container">
+                <div class="auth-box">
+                    <h2 class="text-center" style="margin-bottom: 1.5rem;">Welcome Back</h2>
+                    <form id="login-form">
+                        <div class="form-group">
+                            <label>Email</label>
+                            <input type="email" required placeholder="you@example.com">
+                        </div>
+                        <div class="form-group">
+                            <label>Password</label>
+                            <input type="password" required placeholder="••••••••">
+                        </div>
+                        <div class="auth-actions">
+                            <label><input type="checkbox"> Remember me</label>
+                            <a href="#" class="text-sm">Forgot password?</a>
+                        </div>
+                        <button type="submit" class="btn btn-primary w-100 mt-3">Sign In</button>
+                    </form>
+                    <p class="text-center mt-4 text-sm">Don't have an account? <a href="#"
+                            style="font-weight: 500;">Sign up</a></p>
+                </div>
+            </div>
+        </section>
+
+    </main>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container footer-grid">
+            <div class="footer-brand">
+                <h2 class="logo">LIANA</h2>
+                <p>Elegance in Every Thread.<br>Minimalist, feminine fashion.</p>
+                <div class="social-icons">
+                    <a href="https://instagram.com/" target="_blank"><i class="fab fa-instagram"></i></a>
+                    <a href="https://pinterest.com/" target="_blank"><i class="fab fa-pinterest"></i></a>
+                    <a href="#"><i class="fab fa-tiktok"></i></a>
+                </div>
+            </div>
+            <div class="footer-links">
+                <h4>Shop</h4>
+                <a href="#" data-link="shop" onclick="window.navigateTo('shop', {category: 'Dresses'})">Dresses</a>
+                <a href="#" data-link="shop" onclick="window.navigateTo('shop', {category: 'Tops'})">Tops</a>
+                <a href="#" data-link="shop" onclick="window.navigateTo('shop', {category: 'Bottoms'})">Bottoms</a>
+                <a href="#" data-link="shop"
+                    onclick="window.navigateTo('shop', {category: 'Accessories'})">Accessories</a>
+            </div>
+            <div class="footer-links">
+                <h4>Help</h4>
+                <a href="#">FAQ</a>
+                <a href="#" data-link="contact">Contact Us</a>
+                <a href="#">Shipping & Returns</a>
+                <a href="#">Size Guide</a>
+            </div>
+            <div class="footer-newsletter">
+                <h4>Stay in the loop</h4>
+                <p>Subscribe to our newsletter for exclusive offers and updates.</p>
+                <form class="newsletter-form" id="newsletter-form">
+                    <input type="email" placeholder="Your email address" required>
+                    <button type="submit"><i class="fas fa-arrow-right"></i></button>
+                </form>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <div class="container">
+                <p>&copy; 2026 LIANA. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Toast Notification Container -->
+    <div id="toast-container"></div>
+
+    <script src="script.js"></script>
+</body>
+
+</html>
