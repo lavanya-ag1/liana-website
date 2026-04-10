@@ -399,6 +399,23 @@
                             style="font-weight: 500;">Sign up</a></p>
                 </div>
             </div>
+        <!-- ================= PROFILE PAGE ================= -->
+        <section id="page-profile" class="page section-padding">
+            <div class="container text-center">
+                <h2 class="page-title" style="margin-bottom:1rem;">My Account</h2>
+                <div class="profile-card" style="max-width: 500px; margin: 0 auto; text-align: left; background: var(--clr-white); padding: 2.5rem; border: 1px solid var(--clr-border);">
+                    <h3>Welcome, <span id="profile-name">User</span>!</h3>
+                    <p class="mt-2 text-gray">User ID: <strong id="profile-id">USR-000000</strong></p>
+                    <p class="text-gray" style="margin-bottom: 2rem; font-size: 0.9rem;" id="profile-email">you@example.com</p>
+                    
+                    <ul style="line-height: 3; font-size: 1.05rem; list-style: none; padding: 0;">
+                        <li style="border-bottom: 1px solid var(--clr-border);"><a href="#" onclick="showToast('Account Settings portal opened.')" style="color: var(--clr-black);"><i class="fas fa-cog" style="width: 25px;"></i> Settings</a></li>
+                        <li style="border-bottom: 1px solid var(--clr-border);"><a href="#" onclick="showToast('Shipping & Returns policy opened.')" style="color: var(--clr-black);"><i class="fas fa-box" style="width: 25px;"></i> Shipping & Returns</a></li>
+                        <li style="border-bottom: 1px solid var(--clr-border);"><a href="#" onclick="showToast('Size Guide opened.')" style="color: var(--clr-black);"><i class="fas fa-ruler-combined" style="width: 25px;"></i> Size Guide</a></li>
+                        <li style="padding-top: 0.5rem;"><a href="#" onclick="window.logoutUser()" style="color: #e74c3c; font-weight: 500;"><i class="fas fa-sign-out-alt" style="width: 25px;"></i> Sign Out</a></li>
+                    </ul>
+                </div>
+            </div>
         </section>
 
     </main>
@@ -427,8 +444,8 @@
                 <h4>Help</h4>
                 <a href="#">FAQ</a>
                 <a href="#" data-link="contact">Contact Us</a>
-                <a href="#">Shipping & Returns</a>
-                <a href="#">Size Guide</a>
+                <a href="#" onclick="showToast('Navigate to your account profile to specify return details!')">Shipping & Returns</a>
+                <a href="#" onclick="showToast('Size guidance chart launched!')">Size Guide</a>
             </div>
             <div class="footer-newsletter">
                 <h4>Stay in the loop</h4>
