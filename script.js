@@ -4,7 +4,7 @@ const products = [
         id: 1,
         name: "Satin Slip Midi Dress",
         category: "Dresses",
-        price: 8500.00,
+        price: 3200.00, // Lowered price
         image: "https://images.unsplash.com/photo-1595777457583-95e059d581b8?auto=format&fit=crop&w=600&q=80",
         description: "Elegant satin slip dress featuring a cowl neckline and adjustable spaghetti straps. Perfect for evening events or layered for daytime chic.",
         isTrending: true
@@ -13,7 +13,7 @@ const products = [
         id: 2,
         name: "Linen Blend Blazer",
         category: "Tops",
-        price: 9200.00,
+        price: 4100.00,
         image: "https://images.unsplash.com/photo-1551048632-24e444b48a3e?auto=format&fit=crop&w=600&q=80",
         description: "A tailored linen-blend blazer that brings instant sophistication to any outfit. Features a single-breasted front and lightly padded shoulders.",
         isTrending: true
@@ -22,7 +22,7 @@ const products = [
         id: 3,
         name: "Wide Leg Trousers",
         category: "Bottoms",
-        price: 6500.00,
+        price: 2500.00,
         image: "https://images.unsplash.com/photo-1541099649105-f69ad21f3246?auto=format&fit=crop&w=600&q=80",
         description: "High-waisted wide-leg trousers that drape beautifully. Features a concealed zip fastening and side pockets.",
         isTrending: true
@@ -31,7 +31,7 @@ const products = [
         id: 4,
         name: "Ribbed Knit Sweater",
         category: "Tops",
-        price: 5500.00,
+        price: 1800.00,
         image: "https://images.unsplash.com/photo-1620799140408-edc6dcb6d633?auto=format&fit=crop&w=600&q=80",
         description: "Cozy ribbed knit sweater with a relaxed fit. Made from a soft wool blend to keep you warm in style."
     },
@@ -39,7 +39,7 @@ const products = [
         id: 5,
         name: "Pleated Midi Skirt",
         category: "Bottoms",
-        price: 6200.00,
+        price: 2200.00,
         image: "https://images.unsplash.com/photo-1582142407894-ec85a1260a46?auto=format&fit=crop&w=600&q=80",
         description: "A timeless pleated midi skirt that moves beautifully. Features an elasticated waistband for comfort."
     },
@@ -47,7 +47,7 @@ const products = [
         id: 6,
         name: "Structured Mini Tote",
         category: "Accessories",
-        price: 7800.00,
+        price: 3800.00,
         image: "https://images.unsplash.com/photo-1584916201218-f4242ceb4809?auto=format&fit=crop&w=600&q=80",
         description: "A minimalist mini tote bag crafted from premium vegan leather. Includes a detachable crossbody strap."
     },
@@ -55,7 +55,7 @@ const products = [
         id: 7,
         name: "Off-Shoulder Blouse",
         category: "Tops",
-        price: 4500.00,
+        price: 1500.00,
         image: "https://images.unsplash.com/photo-1554412933-514a83d2f3c8?auto=format&fit=crop&w=600&q=80",
         description: "Romantic off-shoulder blouse with subtle volume sleeves. Perfect for date night."
     },
@@ -63,7 +63,7 @@ const products = [
         id: 8,
         name: "Classic Wrap Dress",
         category: "Dresses",
-        price: 8900.00,
+        price: 3600.00,
         image: "https://images.unsplash.com/photo-1612336307429-8a898d10e223?auto=format&fit=crop&w=600&q=80",
         description: "The universally flattering wrap dress in a soft, breathable fabric. Ties at the waist."
     },
@@ -71,7 +71,7 @@ const products = [
         id: 9,
         name: "Silk Scarf",
         category: "Accessories",
-        price: 3500.00,
+        price: 900.00,
         image: "https://images.unsplash.com/photo-1601924994987-69e26d50dc26?auto=format&fit=crop&w=600&q=80",
         description: "A versatile silk scarf that can be worn around the neck, in your hair, or tied to your favourite bag."
     },
@@ -79,7 +79,7 @@ const products = [
         id: 10,
         name: "Puff Sleeve Midi Dress",
         category: "Dresses",
-        price: 9500.00,
+        price: 4500.00,
         image: "https://images.unsplash.com/photo-1572804013309-59a88b7e92f1?auto=format&fit=crop&w=600&q=80",
         description: "A dreamy puff sleeve dress with a fitted bodice and flowing skirt."
     },
@@ -87,7 +87,7 @@ const products = [
         id: 11,
         name: "Tailored Linen Shorts",
         category: "Bottoms",
-        price: 4800.00,
+        price: 1600.00,
         image: "https://images.unsplash.com/photo-1591369822096-114cb1735515?auto=format&fit=crop&w=600&q=80",
         description: "Chic linen shorts with a high-rise waist and subtle pleating."
     },
@@ -95,19 +95,62 @@ const products = [
         id: 12,
         name: "Gold Plated Hoop Earrings",
         category: "Accessories",
-        price: 2800.00,
+        price: 1200.00,
         image: "https://images.unsplash.com/photo-1535632066927-ab0c9ab60908?auto=format&fit=crop&w=600&q=80",
         description: "Classic gold-plated hoops that add a touch of elegance to any look."
+    },
+    {
+        id: 13,
+        name: "V-Neck Cashmere Cardigan",
+        category: "Tops",
+        price: 6500.00,
+        image: "https://images.unsplash.com/photo-1620799140188-3b2a02fd9a77?auto=format&fit=crop&w=600&q=80",
+        description: "Ultra-soft premium cashmere cardigan with a relaxed V-neck silhouette."
+    },
+    {
+        id: 14,
+        name: "Floral Summer Maxi",
+        category: "Dresses",
+        price: 3900.00,
+        image: "https://images.unsplash.com/photo-1572804013427-4d7ca7268217?auto=format&fit=crop&w=600&q=80",
+        description: "Breezy floral maxi dress perfect for summer getaways and brunches."
+    },
+    {
+        id: 15,
+        name: "Minimalist Leather Belt",
+        category: "Accessories",
+        price: 1400.00,
+        image: "https://images.unsplash.com/photo-1553062407-98eeb64c6a62?auto=format&fit=crop&w=600&q=80",
+        description: "A sleek and versatile thin leather belt with a subtle gold buckle."
+    },
+    {
+        id: 16,
+        name: "Flared Denim Jeans",
+        category: "Bottoms",
+        price: 2900.00,
+        image: "https://images.unsplash.com/photo-1541099649105-f69ad21f3246?auto=format&fit=crop&w=600&q=80",
+        description: "Classic vintage-washed flared jeans with a flattering high rise."
     }
 ];
 
 /* ================== STATE MANAGEMENT ================== */
 let cart = JSON.parse(localStorage.getItem('liana_cart')) || [];
 let wishlist = JSON.parse(localStorage.getItem('liana_wishlist')) || [];
+let currentUser = JSON.parse(localStorage.getItem('liana_user')) || null;
+
 let currentCategoryFilter = 'All';
+let currentPriceFilter = 'All';
 
 /* ================== ROUTING (SPA LOGIC) ================== */
 function navigateTo(pageId, state = {}) {
+    // Auth Guard
+    if (pageId === 'auth' && currentUser) {
+        pageId = 'profile'; // Redirect to profile if already logged in
+    }
+    if (pageId === 'profile' && !currentUser) {
+        pageId = 'auth'; // Redirect to login if not logged in
+    }
+
     // Hide all pages
     document.querySelectorAll('.page').forEach(page => {
         page.classList.remove('active-page');
@@ -134,7 +177,6 @@ function navigateTo(pageId, state = {}) {
     if (pageId === 'shop') {
         if (state.category) {
             currentCategoryFilter = state.category;
-            // Update UI radio button
             const radio = document.querySelector(`input[name="category"][value="${state.category}"]`);
             if(radio) radio.checked = true;
         }
@@ -147,6 +189,8 @@ function navigateTo(pageId, state = {}) {
         renderCheckout();
     } else if (pageId === 'wishlist') {
         renderWishlist();
+    } else if (pageId === 'profile') {
+        renderProfile();
     }
 }
 
@@ -159,7 +203,7 @@ document.addEventListener('DOMContentLoaded', () => {
     document.querySelectorAll('[data-link]').forEach(el => {
         el.addEventListener('click', (e) => {
             e.preventDefault();
-            const pageId = el.getAttribute('data-link');
+            let pageId = el.getAttribute('data-link');
             navigateTo(pageId);
         });
     });
@@ -181,15 +225,18 @@ document.addEventListener('DOMContentLoaded', () => {
         searchOverlay.classList.remove('active');
     });
 
-    // Mobile Menu
-    document.getElementById('mobile-menu-btn').addEventListener('click', () => {
-        showToast("Mobile menu toggled (Implement expanding menu here)");
-    });
-
-    // Shop Filters
+    // Shop Filters - Category
     document.querySelectorAll('input[name="category"]').forEach(radio => {
         radio.addEventListener('change', (e) => {
             currentCategoryFilter = e.target.value;
+            renderShop();
+        });
+    });
+
+    // Shop Filters - Price
+    document.querySelectorAll('input[name="price"]').forEach(radio => {
+        radio.addEventListener('change', (e) => {
+            currentPriceFilter = e.target.value;
             renderShop();
         });
     });
@@ -199,19 +246,29 @@ document.addEventListener('DOMContentLoaded', () => {
     if(loginForm) {
         loginForm.addEventListener('submit', (e) => {
             e.preventDefault();
-            showToast("Successfully signed in!");
-            setTimeout(() => navigateTo('home'), 1500);
+            const emailInput = loginForm.querySelector('input[type="email"]').value;
+            const username = emailInput.split('@')[0];
+            const userId = 'USR-' + Math.floor(100000 + Math.random() * 900000);
+            
+            currentUser = { 
+                email: emailInput, 
+                name: username.charAt(0).toUpperCase() + username.slice(1), 
+                id: userId 
+            };
+            
+            localStorage.setItem('liana_user', JSON.stringify(currentUser));
+            showToast(`Welcome back, ${currentUser.name}!`);
+            setTimeout(() => navigateTo('profile'), 1000);
         });
     }
 
-    // Init UI Arrays
+    // Init UI 
     updateBadges();
     renderHomeTrending();
 });
 
 /* ================== RENDER FUNCTIONS ================== */
 
-// Generate a singular product card HTML
 function generateProductCardHTML(product) {
     const inWishlist = wishlist.includes(product.id);
     const heartClass = inWishlist ? 'fas fa-heart' : 'far fa-heart';
@@ -251,15 +308,28 @@ function renderShop() {
     const countLabel = document.getElementById('product-count');
     
     let filtered = products;
+    
+    // Apply Category Filter
     if (currentCategoryFilter !== 'All') {
-        filtered = products.filter(p => p.category === currentCategoryFilter);
+        filtered = filtered.filter(p => p.category === currentCategoryFilter);
+    }
+    
+    // Apply Price Filter
+    if (currentPriceFilter !== 'All') {
+        if (currentPriceFilter === 'under5000') {
+            filtered = filtered.filter(p => p.price < 5000);
+        } else if (currentPriceFilter === '5000to10000') {
+            filtered = filtered.filter(p => p.price >= 5000 && p.price <= 10000);
+        } else if (currentPriceFilter === 'over10000') {
+            filtered = filtered.filter(p => p.price > 10000);
+        }
     }
     
     countLabel.innerText = `Showing ${filtered.length} results`;
     grid.innerHTML = filtered.map(generateProductCardHTML).join('');
     
     if(filtered.length === 0) {
-        grid.innerHTML = '<p class="text-center" style="grid-column: 1/-1;">No products found in this category.</p>';
+        grid.innerHTML = '<p class="text-center" style="grid-column: 1/-1;">No products match your filters.</p>';
     }
 }
 
@@ -306,6 +376,16 @@ function renderProductDetail(id) {
                     <i class="${wishlist.includes(product.id) ? 'fas fa-heart' : 'far fa-heart'}"></i> Wishlist
                 </button>
             </div>
+            
+            <div class="pd-extra mt-4" style="line-height:2; font-size:0.9rem; color:var(--clr-gray);">
+                <div style="cursor:pointer;" onclick="showToast('Open Shipping & Returns policy details.')">
+                    <i class="fas fa-box"></i> Shipping & Returns <span style="float:right;">+</span>
+                </div>
+                <hr style="opacity: 0.3; margin: 0.5rem 0;">
+                <div style="cursor:pointer;" onclick="showToast('Size Guide chart overlay.')">
+                    <i class="fas fa-ruler-combined"></i> Size Guide <span style="float:right;">+</span>
+                </div>
+            </div>
         </div>
     `;
 }
@@ -324,6 +404,24 @@ function renderWishlist() {
         const wItems = products.filter(p => wishlist.includes(p.id));
         grid.innerHTML = wItems.map(generateProductCardHTML).join('');
     }
+}
+
+function renderProfile() {
+    if (!currentUser) return;
+    const nameEl = document.getElementById('profile-name');
+    const idEl = document.getElementById('profile-id');
+    const emailEl = document.getElementById('profile-email');
+    
+    if(nameEl) nameEl.innerText = currentUser.name;
+    if(idEl) idEl.innerText = currentUser.id;
+    if(emailEl) emailEl.innerText = currentUser.email;
+}
+
+window.logoutUser = function() {
+    currentUser = null;
+    localStorage.removeItem('liana_user');
+    showToast("You have been successfully signed out.");
+    navigateTo('home');
 }
 
 function renderCart() {
@@ -475,7 +573,7 @@ function updateBadges() {
     document.getElementById('wishlist-count').innerText = wishlist.length;
 }
 
-function showToast(message) {
+window.showToast = function(message) {
     const container = document.getElementById('toast-container');
     const toast = document.createElement('div');
     toast.className = 'toast';
